@@ -6,7 +6,7 @@ MLitePushNotification() {
 }
 
 MLitePushNotification
-while sleep 6; do MLitePushNotification; done
+while sleep 11; do MLitePushNotification; done
 
 
 #COMMAND TO RUN IS: su -c "sh ./MLitePushCommand.sh"
