@@ -1,0 +1,5 @@
+#!/bin/bash
+termux-wake-lock
+
+MlitePath="./MLiteNotificationService.sh"
+su -c "sh" $MlitePath
