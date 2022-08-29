@@ -2,4 +2,5 @@
 termux-wake-lock
 
 MlitePath="./MLiteNotificationService.sh"
-su -c "sh" $MlitePath
+#su -c "sh" $MlitePath
+su -s "/data/data/com.termux/files/usr/bin/bash" -c "sh" $MlitePath
