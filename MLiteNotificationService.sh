@@ -8,7 +8,6 @@ UID=1 #Get MLite user ID or UID
 MLitePushNotification() {
         isMLiteRunning=$(am get-uid-state $UID)
 
-        echo $isMLiteRunning
         if [[ "$isMLiteRunning" == *"NONEXISTENT"* ]]; then
                 am stop-service --user 0 -n com.facebook.mlite/com.facebook.mlite.notify.DelayedNotificationService
                 am startforegroundservice --user 0 -n com.facebook.mlite/com.facebook.mlite.notify.DelayedNotificationService
