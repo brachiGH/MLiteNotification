@@ -3,9 +3,7 @@ echo "MLite Notificaton Starting"
 
 UID=0 #Get MLite user ID or UID
 
-if [ $UID -eq 0	]; then
-	echo "Set MLite user ID or UID inside MLiteNotificationService.sh"
-fi
+
 
 MLitePushNotification() {
 	isMLiteRunning=$(am get-uid-state $UID)
@@ -15,8 +13,12 @@ MLitePushNotification() {
 	fi
 }
 
-MLitePushNotification
-while sleep 11; do MLitePushNotification; done
 
+if [ $UID -eq 0	]; then
+	echo "Set MLite user ID or UID inside MLiteNotificationService.sh"
+else
+	MLitePushNotification
+	while sleep 11; do MLitePushNotification; done
+fi
 
 #COMMAND TO RUN IS: su -c "sh ./MLitePushCommand.sh"
